@@ -1,13 +1,614 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4rem;
+  overflow-x: hidden;
+  color: #444;
+  background-color: #999;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  line-height: 1.6rem;
+  color: #444;
+}
+
+header li a {
+  color: #444;
+  /* Blue */
+}
+
+h2 {
+  font-size: 1.5rem; /* ≈ 24px */
+}
+
+p {
+  font-size: 0.9rem; /* ≈ 14.4px */
+  line-height: 1.3; /* Reduce spacing */
+}
+
+label,
+a {
+  display: inline !important;
+}
+
+a {
+  text-decoration: none; /* Optional: Removes underline */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  padding: 0 !important;
+  border: none !important;
+}
+
+input,
+select,
+textarea {
+  width: 100% !important;
+  padding: 1rem !important;
+  height: 1rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+  line-height: 4rem;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+button {
+  margin-bottom: 0 !important;
+  padding: 0rem !important;
+}
+
+section {
+  margin: 0 !important;
+  padding: 2rem !important;
+}
+
+img {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 10px; /* Optional: Rounded corners */
+}
+
+main {
+  padding: 0rem 0rem;
+}
+
+@media (max-width: 120rem) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 87.5rem) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 75rem) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 62rem) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 48rem) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 42rem) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 30rem) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* HEADER NAV SECTION */
+
+.header {
+  height: 3rem;
+  background-color: #d0bfff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+}
+
+.header div:nth-child(1) p {
+  font-weight: 600;
+  color: #444;
+}
+
+.header div:nth-child(2) button:nth-child(1) {
+  background-color: #9775fa;
+  outline: none;
+  border-style: none;
+  color: white;
+  width: 100%;
+  padding: 0.1rem 0.5rem !important;
+}
+
+.header div:nth-child(2) button:nth-child(1):hover {
+  background-color: #845ef7;
+  outline: none;
+  border-style: none;
+  color: white;
+  outline: none;
+  width: 100%;
+  padding: 0.1rem 0.5rem !important;
+}
+
+.header div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header div:nth-child(3) button:nth-child(1) {
+  background-color: #e5dbff;
+  outline: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #444;
+  border-radius: 100px;
+  padding: 0.1rem 2rem !important;
+  color: #444;
+}
+
+.header div:nth-child(3) button:nth-child(1):hover {
+  background-color: #f3f0ff;
+  outline: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #555;
+  border-radius: 100px;
+  padding: 0.1rem 2rem !important;
+  color: #444;
+}
+
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* Main Menu*/
+
+.mainmenu {
+  display: grid;
+  grid-template-columns: 2.5fr 5fr 2.5fr;
+  height: 90vh;
+}
+
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* Sidebar Left */
+
+.sidebar-right {
+  background-color: #f3f0ff;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* Sidebar Left */
+
+.sidebar-left {
+  background-color: #f3f0ff;
+  max-height: 100vh;
+  overflow-y: auto; /* Enables vertical scrolling when needed */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* CENTER CONTENT */
+
+.blog-content {
+  background-color: white;
+}
+
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* WERBUNG RIGHT */
+
+.promotion-container {
+  margin-top: 4rem;
+}
+
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* Sidebar Right */
+
+.SidebarBlog {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* Blog Content */
+
+.SidebarBlog {
+  display: grid;
+  grid-template-rows: 3fr 7fr;
+  max-height: 5rem;
+  margin: 1rem 1rem;
+}
+
+.SidebarBlog div {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+}
+
+.SidebarBlog div:nth-child(1) p:nth-child(1) {
+  font-size: 0.9rem !important;
+  font-weight: 600;
+  line-height: 0.9rem;
+  margin-bottom: 0.2rem !important;
+}
+
+.SidebarBlog div:nth-child(1) p:nth-child(2) {
+  font-size: 0.6rem !important;
+  color: #999;
+  font-weight: 400;
+  text-align: right;
+}
+
+.SidebarBlog p {
+  font-size: 0.6rem !important;
+  font-weight: 500;
+  text-align: left;
+  height: 2rem !important;
+}
+
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* Login Page */
+
+.login-page {
+  height: 100vh;
+  background-image: url(../img/bg-login.png);
+  background-size: cover; /* This makes it cover the whole div */
+  background-position: center; /* This centers the image */
+  background-repeat: no-repeat; /* Prevents tiling if image is smaller */
+}
+
+.login-page {
+  height: 100vh;
+  background-image: url(../img/bg-login.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.9); /* slight transparency */
+  padding: 2rem;
+  width: 40%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  text-align: center;
+}
+
+.login-box h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.login-text {
+  margin-bottom: 1rem !important;
+  color: #555;
+  font-style: italic;
+}
+
+.login-box label {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-weight: 500;
+  margin-right: 2rem !important;
+}
+
+.login-box input {
+  width: 100%;
+  height: 0rem !important;
+  padding: 0.2rem !important;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-right: 2rem !important;
+  padding-left: 2rem !important;
+}
+
+label,
+a {
+  display: inline !important;
+  margin-left: 2rem !important;
+}
+
+.login {
+  background-color: inherit;
+  outline: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #444;
+  border-radius: 100px;
+  padding: 0.1rem 2rem !important;
+  color: #444;
+  margin-bottom: 1rem !important;
+}
+
+.login:hover {
+  background-color: inherit;
+  outline: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 100px;
+  padding: 0.1rem 2rem !important;
+  color: white;
+  margin-bottom: 1rem !important;
+}
+
+.sign-in-button {
+  background-color: inherit;
+  outline: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #444;
+  border-radius: 100px;
+  padding: 0.2rem 3rem !important;
+  background-color: #444;
+  color: white;
+}
+
+.sign-in-button:hover {
+  background-color: inherit;
+  outline: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 100px;
+  padding: 0.2rem 3rem !important;
+  background-color: white;
+  color: #444;
+}
+
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* Modal Overlay */
+/* Modal Overlay (darkened background) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Perfect centering */
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+/* Optional: Animation for smooth opening of the modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Modal content heading */
+.modal-content h2 {
+  margin-bottom: 20px; /* Space between heading and body */
+}
+
+/* Modal content button */
+.sign-in-button-modal:hover {
+  background-color: inherit;
+  outline: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #444;
+  border-radius: 100px;
+  padding: 0.2rem 3rem !important;
+  background-color: #444;
+  color: white;
+}
+
+.sign-in-button-modal {
+  background-color: inherit;
+  outline: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #444;
+  border-radius: 100px;
+  padding: 0.2rem 3rem !important;
+  background-color: white;
+  color: #444;
+}
+
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* Google Add */
+
+.google-ad {
+  width: 100% !important;
+}
+
+.blog-content {
+  text-align: start;
+}
+
+.blog-content-text {
+  padding: 1rem 1rem !important;
+  font-size: 0.6rem !important;
+  line-height: 1rem;
+}
+
+.blog-content-title {
+  padding: 1rem 1rem !important;
+  line-height: 2rem;
+}
+
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------*/
+/* POST MODAL */
+
+.modal-content-newpost {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 25rem;
+  transform: translate(-50%, -50%); /* Perfect centering */
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  z-index: 1000;
+  height: 20rem;
+}
+
+.new-post-textarea {
+  align-self: center !important;
+  height: 6rem !important;
 }

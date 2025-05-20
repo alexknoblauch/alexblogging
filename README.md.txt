@@ -3,6 +3,7 @@
 Dieses Projekt ist ein Reaktiver Blog der durch vanilla PHP angebunden wurde. 
 Das war das erste Mal dass ich mit PHP gearbeitet habe.
 
+
 ## 🚀 Features
 
 -Loginsystem
@@ -16,6 +17,13 @@ Das war das erste Mal dass ich mit PHP gearbeitet habe.
 -Diesen Repo lokal abpeichern danach npm run start.
 
 -XAMP für Backend starten (zusammen mit repo alexblogging_backend)
+
+
+## ⚠ Schwirigkeiten:
+
+-Session speichern mit credentials in fetch request. Das war eine Knacknuss.
+-Im Backend mit ein bisschen AI Beratung ging auch das.
+
 
 Clone the repository:
 
